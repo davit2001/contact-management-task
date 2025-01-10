@@ -15,11 +15,11 @@
       "profilePicture": "https://ui-avatars.com/api/?name=Jane+Doe&background=random"
     },
     {
-      "id": 3,
-      "name": "John Smith",
+      "name": "John Smitha",
       "username": "john.smith",
       "bio": "Passionate Fullstack Developer, crafting experiences",
-      "profilePicture": "https://ui-avatars.com/api/?name=John+Smith&background=random"
+      "profilePicture": "https://ui-avatars.com/api/?name=John+Smith&background=random",
+      "id": 3
     },
     {
       "id": 4,
@@ -29,7 +29,7 @@
       "profilePicture": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=random"
     },
     {
-      "name": "Michael Chen",
+      "name": "Michael Chena",
       "username": "michael.chena",
       "bio": "Mobile App Developer creating innovative solutions",
       "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
@@ -97,6 +97,48 @@
       "username": "jessica.rodriguez",
       "bio": "Software Engineer with a passion for clean code",
       "profilePicture": "https://ui-avatars.com/api/?name=Jessica+Rodriguez&background=random"
+    },
+    {
+      "name": "New name",
+      "username": "new.name",
+      "bio": "This is a bio textaaaaaaaaaaaaa",
+      "profilePicture": "https://ui-avatars.com/api/?name=New+Name&background=random",
+      "id": "m3zes"
+    },
+    {
+      "name": "New name2",
+      "username": "new.name2",
+      "bio": "Web App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Web+App&background=random",
+      "id": "jxt9sn"
+    },
+    {
+      "name": "New name 3",
+      "username": "new.name3",
+      "bio": "Desktop Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Desktop+Development&background=random",
+      "id": "wetu44"
+    },
+    {
+      "name": "New name 4",
+      "username": "new.name4",
+      "bio": "App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": "f5lgfa"
+    },
+    {
+      "name": "New name 5",
+      "username": "new.name5",
+      "bio": "Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": "wl720w"
+    },
+    {
+      "name": "New name 6",
+      "username": "new.name6",
+      "bio": "Web App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": "14t2xs"
     }
   ]
 }

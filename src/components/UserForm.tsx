@@ -6,7 +6,7 @@ import DialogTitle from '@/ui/molecule/DialogTitle.tsx';
 import { useForm } from '@tanstack/react-form';
 import { userSchema } from '@/schemas/user.schema.ts';
 import FormField from '@/components/FormField.tsx';
-import useUpdateUser from '@/hooks/useUpdateUser.ts';
+import useMutateUser from '@/hooks/useMutateUser.ts';
 import DialogActions from '@/ui/atoms/DialogActions.tsx';
 
 interface User  {
@@ -18,23 +18,26 @@ interface User  {
 }
 
 interface UserEditFormProps {
-  userData: User
+  source: 'create' | 'update';
+  title: string;
+  buttonName: string;
+  userData?: User;
 }
 
-const UserEditForm: FC<UserEditFormProps> = ({ userData }) => {
+const UserForm: FC<UserEditFormProps> = ({ title, userData, buttonName }) => {
   const {
     open: isUpdateContactFormOpen,
     onOpen: openUpdateContactForm,
     onClose: closeUpdateContactForm,
   } = useDialog();
-  const { mutate } = useUpdateUser(userData.id);
+  const { mutate } = useMutateUser(userData?.id);
 
   const form = useForm({
     defaultValues: {
-      name: userData.name || '',
-      username: userData.username,
-      bio: userData.bio,
-      profilePicture: userData.profilePicture,
+      name: userData?.name || '',
+      username: userData?.username || '',
+      bio: userData?.bio || '',
+      profilePicture: userData?.profilePicture || '',
     },
     onSubmit: async function <T>(values: T)  {
       mutate(values as {
@@ -49,8 +52,8 @@ const UserEditForm: FC<UserEditFormProps> = ({ userData }) => {
 
   return (
     <div>
-      <Button aria-label="Update user" aria-haspopup="dialog" color="primary" onClick={openUpdateContactForm}>
-        Edit
+      <Button aria-label={title} aria-haspopup="dialog" color="primary" onClick={openUpdateContactForm}>
+        {buttonName}
       </Button>
       <Dialog open={isUpdateContactFormOpen} onClose={closeUpdateContactForm} size="md">
         <form
@@ -60,7 +63,7 @@ const UserEditForm: FC<UserEditFormProps> = ({ userData }) => {
             form.handleSubmit()
           }}
         >
-          <DialogTitle title="Edit user data" onClose={closeUpdateContactForm}/>
+          <DialogTitle title={title} onClose={closeUpdateContactForm}/>
           <div className="flex flex-col gap-2">
             <form.Field
               name="name"
@@ -93,4 +96,4 @@ const UserEditForm: FC<UserEditFormProps> = ({ userData }) => {
   )
 };
 
-export default UserEditForm;
+export default UserForm;

@@ -2,7 +2,7 @@ import { useSnackbar } from 'notistack';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { GET_USERS, GET_USER } from '@/constants/query.ts';
 
-const useUpdateUser = (id: string) => {
+const useMutateUser = (id?: string) => {
   const queryClient = useQueryClient();
   const { enqueueSnackbar } = useSnackbar();
 
@@ -16,13 +16,27 @@ const useUpdateUser = (id: string) => {
         profilePicture: string;
       }
     }) => {
-      const response = await fetch(`${process.env.API_URL}/users/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values.value),
-      });
+      let response;
+      if (id) {
+        response = await fetch(`${process.env.API_URL}/users/${id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values.value),
+        })
+      } else {
+        response = await fetch(`${process.env.API_URL}/users`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...values.value,
+            id: Math.random().toString(36).substring(7),
+          }),
+        })
+      }
       if (!response.ok) {
         throw new Error('Network response was not ok')
       }
@@ -39,8 +53,8 @@ const useUpdateUser = (id: string) => {
     },
     onError: (error) => {
       enqueueSnackbar(error.message, { variant: 'error' });
-    }
+    },
   })
 };
 
-export default useUpdateUser;
+export default useMutateUser;

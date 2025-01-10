@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import useQueryUser from '@/hooks/useQueryUser.ts';
 import Image from '@/ui/atoms/Image.tsx';
-import UserEditForm from '@/components/UserEditForm.tsx';
+import UserForm from '@/components/UserForm.tsx';
 import DeleteUserDialog from '@/components/DeleteUserDialog.tsx';
 import fallbackImageUrl from '@/assets/fallback-image.png';
 import Loader from '@/assets/spinner.svg';
@@ -37,7 +37,7 @@ function RouteComponent() {
                 <p className="text-blue">{data.username}</p>
                 <p className="text-gray-500">{data.bio}</p>
                 <div className="pt-1 flex gap-1">
-                  <UserEditForm userData={data} />
+                  <UserForm source="update" title="Edit user data" buttonName="Edit" userData={data} />
                   <DeleteUserDialog />
                 </div>
               </div>

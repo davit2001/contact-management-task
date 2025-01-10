@@ -12,6 +12,13 @@ const FormField = (field: unknown) => (
       onChange={(e) => field.handleChange(e.target.value)}
       onBlur={field.handleBlur}
     />
+    <>
+      {field.state.meta.errors ? (
+        <p className="text-red text-xs">
+          {field.state.meta.errors}
+        </p>
+      ) : null}
+    </>
   </div>
 );
 
