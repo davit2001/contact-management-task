@@ -9,7 +9,7 @@ interface NavigationItemProps {
 const NavigationItem: FC<PropsWithChildren<NavigationItemProps>> = ({ className = '', to, ...props}) => (
   <Link to={to} {...props}>
     {({ isActive }) => (
-      <span className={`rounded-md text-sm md:text-base font-medium tracking-wide py-2 px-3 hover:bg-gray-300 hover:text-white ${isActive ? 'bg-blue text-white hover:bg-blue': 'text-black'} ${className}`}>
+      <span className={`rounded-md text-sm md:text-base font-medium tracking-wide py-2 px-3 hover:text-white ${isActive ? 'bg-blue text-white hover:bg-blue': 'text-black hover:bg-gray-300'} ${className}`}>
         {props.children}
       </span>
     )}

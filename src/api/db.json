@@ -29,11 +29,11 @@
       "profilePicture": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=random"
     },
     {
-      "id": 5,
       "name": "Michael Chen",
-      "username": "michael.chen",
+      "username": "michael.chena",
       "bio": "Mobile App Developer creating innovative solutions",
-      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random"
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": 5
     },
     {
       "id": 6,
@@ -92,11 +92,11 @@
       "profilePicture": "https://ui-avatars.com/api/?name=Thomas+Garcia&background=random"
     },
     {
-        "id": 14,
-        "name": "Jessica Rodriguez",
-        "username": "jessica.rodriguez",
-        "bio": "Software Engineer with a passion for clean code",
-        "profilePicture": "https://ui-avatars.com/api/?name=Jessica+Rodriguez&background=random"
+      "id": 14,
+      "name": "Jessica Rodriguez",
+      "username": "jessica.rodriguez",
+      "bio": "Software Engineer with a passion for clean code",
+      "profilePicture": "https://ui-avatars.com/api/?name=Jessica+Rodriguez&background=random"
     }
   ]
 }
