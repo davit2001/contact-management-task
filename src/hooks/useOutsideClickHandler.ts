@@ -6,19 +6,21 @@ const useOutsideClickHandler = <T>(
   whitelist?: Array<string>,
 ) => {
   useEffect(() => {
-    function handleClickOutside(event: ChangeEvent) {
+    function handleClickOutside(event: ChangeEvent<HTMLElement>) {
       if (
         ref.current &&
-        !(ref.current as HTMLElement).contains(event.target) &&
+        // eslint-disable-next-line
+        // @ts-ignore
+        !(ref.current).contains(event.target) &&
         !whitelist?.includes(event.target?.id)
       ) {
         onOutsideClick();
       }
     }
 
-    window?.addEventListener('mousedown', handleClickOutside);
+    window?.addEventListener('mousedown', handleClickOutside as never);
     return () => {
-      window?.removeEventListener('mousedown', handleClickOutside);
+      window?.removeEventListener('mousedown', handleClickOutside as never);
     };
   }, [onOutsideClick, ref, whitelist]);
 };
