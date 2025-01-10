@@ -8,25 +8,11 @@
       "profilePicture": "https://ui-avatars.com/api/?name=John+Doe&background=random"
     },
     {
-      "id": 2,
-      "name": "Jane Doe",
-      "username": "jane.doe",
-      "bio": "Passionate Backend Developer, crafting experiences",
-      "profilePicture": "https://ui-avatars.com/api/?name=Jane+Doe&background=random"
-    },
-    {
-      "name": "John Smitha",
-      "username": "john.smith",
-      "bio": "Passionate Fullstack Developer, crafting experiences",
-      "profilePicture": "https://ui-avatars.com/api/?name=John+Smith&background=random",
-      "id": 3
-    },
-    {
-      "id": 4,
-      "name": "Sarah Johnson",
+      "name": "Sarah Johnsona",
       "username": "sarah.johnson",
       "bio": "DevOps Engineer specializing in cloud infrastructure",
-      "profilePicture": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=random"
+      "profilePicture": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=random",
+      "id": 4
     },
     {
       "name": "Michael Chena",
@@ -34,20 +20,6 @@
       "bio": "Mobile App Developer creating innovative solutions",
       "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
       "id": 5
-    },
-    {
-      "id": 6,
-      "name": "Emily Brown",
-      "username": "emily.brown",
-      "bio": "UI/UX Designer with a passion for user-centered design",
-      "profilePicture": "https://ui-avatars.com/api/?name=Emily+Brown&background=random"
-    },
-    {
-      "id": 7,
-      "name": "David Wilson",
-      "username": "david.wilson",
-      "bio": "Data Scientist exploring machine learning frontiers",
-      "profilePicture": "https://ui-avatars.com/api/?name=David+Wilson&background=random"
     },
     {
       "id": 8,
@@ -64,11 +36,11 @@
       "profilePicture": "https://ui-avatars.com/api/?name=Robert+Taylor&background=random"
     },
     {
-      "id": 10,
-      "name": "Amanda Lee",
+      "name": "Amanda Leee",
       "username": "amanda.lee",
       "bio": "QA Engineer ensuring software quality",
-      "profilePicture": "https://ui-avatars.com/api/?name=Amanda+Lee&background=random"
+      "profilePicture": "https://ui-avatars.com/api/?name=Amanda+Lee&background=random",
+      "id": 10
     },
     {
       "id": 11,
@@ -85,13 +57,6 @@
       "profilePicture": "https://ui-avatars.com/api/?name=Rachel+White&background=random"
     },
     {
-      "id": 13,
-      "name": "Thomas Garcia",
-      "username": "thomas.garcia",
-      "bio": "AI Engineer pushing boundaries of machine intelligence",
-      "profilePicture": "https://ui-avatars.com/api/?name=Thomas+Garcia&background=random"
-    },
-    {
       "id": 14,
       "name": "Jessica Rodriguez",
       "username": "jessica.rodriguez",
@@ -106,39 +71,53 @@
       "id": "m3zes"
     },
     {
-      "name": "New name2",
-      "username": "new.name2",
-      "bio": "Web App Developer creating innovative solutions",
-      "profilePicture": "https://ui-avatars.com/api/?name=Web+App&background=random",
-      "id": "jxt9sn"
-    },
-    {
-      "name": "New name 3",
-      "username": "new.name3",
-      "bio": "Desktop Developer creating innovative solutions",
-      "profilePicture": "https://ui-avatars.com/api/?name=Desktop+Development&background=random",
-      "id": "wetu44"
-    },
-    {
-      "name": "New name 4",
-      "username": "new.name4",
-      "bio": "App Developer creating innovative solutions",
+      "name": "New user 1",
+      "username": "user.name1",
+      "bio": "11 App Developer creating innovative solutions",
       "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
-      "id": "f5lgfa"
+      "id": "zs1kpj"
     },
     {
-      "name": "New name 5",
-      "username": "new.name5",
-      "bio": "Developer creating innovative solutions",
+      "name": "New user 123",
+      "username": "user.name1",
+      "bio": "11 App Developer creating innovative solutions",
       "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
-      "id": "wl720w"
+      "id": "prkrc8"
     },
     {
-      "name": "New name 6",
-      "username": "new.name6",
-      "bio": "Web App Developer creating innovative solutions",
+      "name": "Test user",
+      "username": "test.user",
+      "bio": "Mobile App Developer creating innovative solutions",
       "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
-      "id": "14t2xs"
+      "id": "o401jn"
+    },
+    {
+      "name": "New user 2",
+      "username": "new.user2",
+      "bio": "11 App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=New+Name&background=random",
+      "id": "idnsl"
+    },
+    {
+      "name": "New user 4",
+      "username": "user.4",
+      "bio": "Mobile App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": "3z3r7i"
+    },
+    {
+      "name": "dfsa",
+      "username": "afsd",
+      "bio": "Mobile App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": "wwb3j8"
+    },
+    {
+      "name": "ccaa",
+      "username": "ccda",
+      "bio": "Mobile App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random",
+      "id": "pdj7i"
     }
   ]
 }

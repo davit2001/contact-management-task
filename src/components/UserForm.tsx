@@ -18,7 +18,6 @@ interface User  {
 }
 
 interface UserEditFormProps {
-  source: 'create' | 'update';
   title: string;
   buttonName: string;
   userData?: User;
