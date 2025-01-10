@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "username": "john.doe",
+      "bio": "Passionate Frontend Developer, crafting experiences",
+      "profilePicture": "https://ui-avatars.com/api/?name=John+Doe&background=random"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "username": "jane.doe",
+      "bio": "Passionate Backend Developer, crafting experiences",
+      "profilePicture": "https://ui-avatars.com/api/?name=Jane+Doe&background=random"
+    },
+    {
+      "id": 3,
+      "name": "John Smith",
+      "username": "john.smith",
+      "bio": "Passionate Fullstack Developer, crafting experiences",
+      "profilePicture": "https://ui-avatars.com/api/?name=John+Smith&background=random"
+    },
+    {
+      "id": 4,
+      "name": "Sarah Johnson",
+      "username": "sarah.johnson",
+      "bio": "DevOps Engineer specializing in cloud infrastructure",
+      "profilePicture": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=random"
+    },
+    {
+      "id": 5,
+      "name": "Michael Chen",
+      "username": "michael.chen",
+      "bio": "Mobile App Developer creating innovative solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Michael+Chen&background=random"
+    },
+    {
+      "id": 6,
+      "name": "Emily Brown",
+      "username": "emily.brown",
+      "bio": "UI/UX Designer with a passion for user-centered design",
+      "profilePicture": "https://ui-avatars.com/api/?name=Emily+Brown&background=random"
+    },
+    {
+      "id": 7,
+      "name": "David Wilson",
+      "username": "david.wilson",
+      "bio": "Data Scientist exploring machine learning frontiers",
+      "profilePicture": "https://ui-avatars.com/api/?name=David+Wilson&background=random"
+    },
+    {
+      "id": 8,
+      "name": "Lisa Martinez",
+      "username": "lisa.martinez",
+      "bio": "Security Engineer protecting digital assets",
+      "profilePicture": "https://ui-avatars.com/api/?name=Lisa+Martinez&background=random"
+    },
+    {
+      "id": 9,
+      "name": "Robert Taylor",
+      "username": "robert.taylor",
+      "bio": "System Architect designing scalable solutions",
+      "profilePicture": "https://ui-avatars.com/api/?name=Robert+Taylor&background=random"
+    },
+    {
+      "id": 10,
+      "name": "Amanda Lee",
+      "username": "amanda.lee",
+      "bio": "QA Engineer ensuring software quality",
+      "profilePicture": "https://ui-avatars.com/api/?name=Amanda+Lee&background=random"
+    },
+    {
+      "id": 11,
+      "name": "Kevin Anderson",
+      "username": "kevin.anderson",
+      "bio": "Blockchain Developer building decentralized applications",
+      "profilePicture": "https://ui-avatars.com/api/?name=Kevin+Anderson&background=random"
+    },
+    {
+      "id": 12,
+      "name": "Rachel White",
+      "username": "rachel.white",
+      "bio": "Product Manager bridging tech and business",
+      "profilePicture": "https://ui-avatars.com/api/?name=Rachel+White&background=random"
+    },
+    {
+      "id": 13,
+      "name": "Thomas Garcia",
+      "username": "thomas.garcia",
+      "bio": "AI Engineer pushing boundaries of machine intelligence",
+      "profilePicture": "https://ui-avatars.com/api/?name=Thomas+Garcia&background=random"
+    },
+    {
+        "id": 14,
+        "name": "Jessica Rodriguez",
+        "username": "jessica.rodriguez",
+        "bio": "Software Engineer with a passion for clean code",
+        "profilePicture": "https://ui-avatars.com/api/?name=Jessica+Rodriguez&background=random"
+    }
+  ]
+}
