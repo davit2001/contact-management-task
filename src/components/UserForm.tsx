@@ -1,9 +1,10 @@
 import { FC } from 'react';
+import { useForm } from '@tanstack/react-form';
+import { useNavigate } from '@tanstack/react-router';
 import useDialog from '@/hooks/useDialog.tsx';
 import Button from '@/ui/atoms/Button.tsx';
 import Dialog from '@/components/Dialog.tsx';
 import DialogTitle from '@/ui/molecule/DialogTitle.tsx';
-import { useForm } from '@tanstack/react-form';
 import { userSchema } from '@/schemas/user.schema.ts';
 import FormField from '@/components/FormField.tsx';
 import useMutateUser from '@/hooks/useMutateUser.ts';
@@ -21,15 +22,17 @@ interface UserEditFormProps {
   title: string;
   buttonName: string;
   userData?: User;
+  mode: 'create' | 'edit';
 }
 
-const UserForm: FC<UserEditFormProps> = ({ title, userData, buttonName }) => {
+const UserForm: FC<UserEditFormProps> = ({ title, userData, buttonName, mode }) => {
   const {
     open: isUpdateContactFormOpen,
     onOpen: openUpdateContactForm,
     onClose: closeUpdateContactForm,
   } = useDialog();
   const { mutate } = useMutateUser(userData?.id);
+  const navigate = useNavigate({ from: '/users/$userId' })
 
   const form = useForm({
     defaultValues: {
@@ -41,6 +44,13 @@ const UserForm: FC<UserEditFormProps> = ({ title, userData, buttonName }) => {
     onSubmit: async function <T>(values: T)  {
       mutate(values as {
         value: User
+      }, {
+        onSuccess: (newData) => {
+          if (mode === 'create') {
+            navigate({ to: '/users/$userId', params: { userId: newData.id } })
+            form.reset();
+          }
+        }
       });
       closeUpdateContactForm();
     },

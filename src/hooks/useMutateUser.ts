@@ -1,10 +1,17 @@
 import { useSnackbar } from 'notistack';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { GET_USERS, GET_USER } from '@/constants/query.ts';
+import { useSearch } from '@tanstack/react-router';
 
 const useMutateUser = (id?: string) => {
   const queryClient = useQueryClient();
   const { enqueueSnackbar } = useSnackbar();
+  const searchParams: {
+    name?: string;
+  } = useSearch({
+    strict: false,
+  });
+  const searchName = searchParams?.name || '';
 
   return useMutation({
     mutationFn: async (values: {
@@ -45,7 +52,7 @@ const useMutateUser = (id?: string) => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: [GET_USERS, '']
+        queryKey: [GET_USERS, searchName]
       });
       queryClient.invalidateQueries({
         queryKey: [GET_USER, `${id}`]

@@ -4,6 +4,7 @@ import { FC, PropsWithChildren } from 'react';
 interface NavigationItemProps {
   className?: string;
   to: string;
+  search?: (prev: Record<string, string>) => Record<string, string>;
 }
 
 const NavigationItem: FC<PropsWithChildren<NavigationItemProps>> = ({ className = '', to, ...props}) => (

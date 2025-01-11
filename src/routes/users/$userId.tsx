@@ -37,7 +37,7 @@ function RouteComponent() {
                 <p className="text-blue">{data.username}</p>
                 <p className="text-gray-500">{data.bio}</p>
                 <div className="pt-1 flex gap-1">
-                  <UserForm title="Edit user data" buttonName="Edit" userData={data} />
+                  <UserForm title="Edit user data" buttonName="Edit" userData={data} mode="edit" />
                   <DeleteUserDialog id={data.id} />
                 </div>
               </div>

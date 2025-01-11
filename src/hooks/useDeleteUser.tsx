@@ -1,12 +1,19 @@
 import { useSnackbar } from 'notistack';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useNavigate, useSearch } from '@tanstack/react-router';
 import { GET_USER, GET_USERS } from '@/constants/query.ts';
-import { useRouter } from '@tanstack/react-router';
 
 const useDeleteUser = (id: number) => {
   const queryClient = useQueryClient();
   const { enqueueSnackbar } = useSnackbar();
-  const router = useRouter();
+  const navigate = useNavigate({ from: '/users/$userId' })
+
+  const searchParams: {
+    name?: string;
+  } = useSearch({
+    strict: false,
+  });
+  const searchName = searchParams?.name || '';
 
   return useMutation({
     mutationFn: async (id: string) => {
@@ -20,12 +27,12 @@ const useDeleteUser = (id: number) => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey: [GET_USERS, '']
+        queryKey: [GET_USERS, searchName]
       });
       queryClient.invalidateQueries({
         queryKey: [GET_USER, `${id}`]
       });
-      router.history.replace('/');
+      navigate({ to: '/', search: { name: searchName }});
     },
     onError: (error) => {
       enqueueSnackbar(error.message, { variant: 'error' });
